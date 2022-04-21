@@ -1,0 +1,18 @@
+{
+  "name": "ifcjs-example",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.9.5"
+  },
+  "dependencies": {
+    "three": "^0.139.2",
+    "web-ifc-three": "^0.0.115",
+    "web-ifc-viewer": "^1.0.176"
+  }
+}

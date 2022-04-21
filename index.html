@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <link rel="icon" type="image/png" href="./favicon.ico"/>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" type="text/css" href="./styles.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>IFC.js</title>
-</head>
-<body>
-<div class="navbar">
-    <p class="title">IFC.js | (Google Drive CDE example re-make)</p>
-</div>
-<div class="app-body">
-    <div class="app-tools">
-        <div class="primary-button-container">
-            <div class="primary-button" id="file_open_button">
-                <div class="primary-button-content">
-                    <img class="primary-button-logo" src="resources/logo.png" alt="ifc.js logo">
-                    <p class="primary-button-text" id="button-text">Load IFC file</p>
-                </div>
-            </div>
-        </div>
-        <div class="separator"></div>
-        <div class="secondary-button" id="tutorial"><a target="_blank" href="https://ifcjs.github.io/info/blog/Build%20a%20CDE%20in%2030%20minutes">Tutorial</a></div>
-        <div class="secondary-button" id="documentation"><a target="_blank" href="https://ifcjs.github.io/info/">Documentation</a></div>
-        <div class="secondary-button" id="project"><a target="_blank" href="https://ifcjs.github.io/info/docs/introduction">This project</a></div>
-        <div class="secondary-button" id="community"><a target="_blank" href="https://discord.com/invite/g7Uzn2KSwB">Community</a></div>
-        <div class="separator"></div>
-        <p class="file-name" id="file-name">Name: -</p>
+  </head>
+  <body>
+    <div class="app-body">
+      <div class="app-tools">
+          <div class="primary-button-container">
+              <div class="primary-button" id="file_open_button">
+                  <div class="primary-button-content">
+                      <img class="primary-button-logo" src="resources/logo.png" alt="ifc.js logo">
+                      <p class="primary-button-text" id="button-text">Load IFC file</p>
+                  </div>
+              </div>
+          </div>
+          <div class="separator"></div>
+          <div class="secondary-button" id="tutorial"><a target="_blank" href="https://ifcjs.github.io/info/blog/Build%20a%20CDE%20in%2030%20minutes">Tutorial</a></div>
+          <div class="secondary-button" id="documentation"><a target="_blank" href="https://ifcjs.github.io/info/">Documentation</a></div>
+          <div class="secondary-button" id="project"><a target="_blank" href="https://ifcjs.github.io/info/docs/introduction">This project</a></div>
+          <div class="secondary-button" id="community"><a target="_blank" href="https://discord.com/invite/g7Uzn2KSwB">Community</a></div>
+          <div class="separator"></div>
+          <p class="file-name" id="file-name">Name: -</p>
+      </div>
+      <div id="viewer-container"></div>
     </div>
-    <div id="viewer-container"></div>
-    <script type="module" src="./main.js"></script>
-    <script type="module" src="./mycode/load_from_file.js"></script>
-</div>
-</body>
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>
