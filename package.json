@@ -11,8 +11,8 @@
     "vite": "^2.9.5"
   },
   "dependencies": {
-    "three": "^0.139.2",
-    "web-ifc-three": "^0.0.115",
-    "web-ifc-viewer": "^1.0.176"
+    "three": "^0.135.0",
+    "web-ifc-three": "^0.0.106",
+    "web-ifc-viewer": "^1.0.177"
   }
 }

@@ -1,7 +1,7 @@
 function loadIfcModelFile(event) {
-    const ifcfile = event.target.files[0]
-    console.log(ifcfile)
-    window.webIfcAPI.IFC.loadIfc(ifcfile, true);
+    const ifcfile = event.target.files[0];
+    const model = window.webIfcAPI.IFC.loadIfc(ifcfile, true);
+    window.webIfcAPI.shadowDropper.renderShadow(model.modelID);
 }
 
 function loadFromFileClick() {

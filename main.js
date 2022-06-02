@@ -13,8 +13,8 @@ viewer.IFC.applyWebIfcConfig({ COORDINATE_TO_ORIGIN: true, USE_FAST_BOOLS: true 
 window.webIfcAPI = viewer;
 
 // Set up scene
-viewer.addAxes();
-viewer.addGrid(50, 50);
+//viewer.grid.setGrid();
+viewer.axes.setAxes();
 viewer.IFC.setWasmPath('wasm/');
 viewer.clipper.active = true;
 let dimensionsActive = false;
@@ -25,7 +25,7 @@ const handleKeyDown = (event) => {
         dimensionsActive = !dimensionsActive;
         viewer.dimensions.active = dimensionsActive;
         viewer.dimensions.previewActive = dimensionsActive;
-        viewer.IFC.unPrepickIfcItems();
+        viewer.IFC.selector.unPrepickIfcItems();
         //window.onmousemove = dimensionsActive ? null : viewer.IFC.prePickIfcItem;
     }
     if (event.code === 'KeyD') {
@@ -37,7 +37,7 @@ const handleKeyDown = (event) => {
     if (event.code === 'Delete') {
         viewer.dimensions.deleteAll();
         viewer.clipper.deletePlane();
-        viewer.IFC.unpickIfcItems();
+        viewer.IFC.selector.unpickIfcItems();
     }
 };
 window.onkeydown = handleKeyDown;
@@ -47,7 +47,7 @@ window.onmousemove = () => viewer.IFC.selector.prePickIfcItem();
 
 // Select items and log properties
 window.ondblclick = async () => {
-    const item = await viewer.IFC.pickIfcItem(true);
+    const item = await viewer.IFC.selector.pickIfcItem(true);
     if(item.modelID === undefined || item.id === undefined ) return;
     console.log(await viewer.IFC.getProperties(item.modelID, item.id, true));
 };
