@@ -44,6 +44,13 @@ a:hover {
     margin: 2rem;
 }
 
+.nav-small {
+    color: #888888;
+    font-size: 0.8rem;
+    font-weight: 100;
+    margin: 0rem 2rem;
+}
+
 .app-body {
     display: flex;
     flex-direction: row;
